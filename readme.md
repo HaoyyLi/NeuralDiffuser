@@ -8,6 +8,8 @@
 
 ### Preprocessing
 
+**!!! please modify the path in the src.**
+
 ```shell
 cd src_icml24/data_prepare
 python fmri_prepare.py --subject <subject> --mask_name nsdgeneral
