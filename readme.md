@@ -47,6 +47,12 @@ cd src_icml24/Image_Reconstructe
 python generate.py --method neuraldiffuser --subject <subject> --imgidx <0-981> --guidance_scale <500000 for paper> --guidance_strength <0.2 for paper> --niter <default=5> --ma <use momentum alignment?>
 ```
 
+### Results
+
+We show the results in `recon/0.0` for without guidance and `recon/500000.0/0.2` for with guidance. Note that these results are $4\times$ downsampled due to file size. This leads to blurry and unclear.
+
+
+
 
 
 ### Acknowledgement
