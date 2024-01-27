@@ -3,9 +3,9 @@ import argparse
 import os
 import sys
 from tqdm import tqdm
-project_path = '/opt/data/private/src/fMRI/Decoding/NeuralDiffuser'
+project_path = '/home/src/NeuralDiffuser'
 sys.path.append(project_path)
-sys.path.append(project_path+'/src_icml24')
+sys.path.append(project_path+'/src')
 import numpy as np
 from himalaya.backend import set_backend
 from himalaya.ridge import RidgeCV

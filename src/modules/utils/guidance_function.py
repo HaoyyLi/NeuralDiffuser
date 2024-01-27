@@ -1,8 +1,8 @@
 import os
 import sys
-root = '/opt/data/private/src/fMRI/Decoding/StructureConstiantMindDiffusion'
-sys.path.append(root)
-sys.path.append(root+'/src')
+project_path = '/home/src/NeuralDiffuser'
+sys.path.append(project_path)
+sys.path.append(project_path+'/src')
 import torch
 from torch.utils.data import DataLoader
 from torch.utils.data import Dataset

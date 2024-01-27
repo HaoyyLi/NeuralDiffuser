@@ -1,10 +1,10 @@
 import os, sys
-nsd_path = '/opt/data/private/dataset/nsd'
-project_path = '/opt/data/private/src/fMRI/Decoding/NeuralDiffuser'
-model_path = "/opt/data/private/huggingface/stable-diffusion-v1-4"
+nsd_path = '/home/dataset/nsd'
+project_path = '/home/src/NeuralDiffuser'
+model_path = "/home/huggingface/stable-diffusion-v1-4"
 
 sys.path.append(project_path)
-sys.path.append(project_path+'/src_icml24')
+sys.path.append(project_path+'/src')
 import h5py
 from PIL import Image
 import scipy.io
@@ -255,7 +255,7 @@ with torch.no_grad():
                             return_dict=False
                         )    
                 # ===============================
-                # 循环迭代seed，为了符合cvpr效果
+                # Iteration random seed to be consistent with Takagi
                 for i in range(40):
                     torch.randn_like(z)
                 # ===============================

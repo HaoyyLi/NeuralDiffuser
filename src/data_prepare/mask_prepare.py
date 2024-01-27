@@ -1,9 +1,9 @@
 # %%
 import os
 import sys
-root = '/opt/data/private/src/fMRI/Decoding/NeuralDiffuser'
+root = '/home/src/NeuralDiffuser'
 sys.path.append(root)
-sys.path.append(root+'/src_icml24')
+sys.path.append(root+'/src')
 import numpy as np
 from modules.nsd_access import NSDAccess
 import argparse
@@ -23,7 +23,7 @@ subject = opt.subject
 out_name = f'nsdgeneral'
 output_dir = f"{root}/data/mask/{subject}/"
 os.makedirs(output_dir, exist_ok=True)
-nsd_path = '/opt/data/private/dataset/nsd/'
+nsd_path = '/home/dataset/nsd/'
 nsda = NSDAccess(nsd_path)
 atlasnames = {
     # "prf-visualrois": ['V1v', 'V1d', 'V2v', 'V2d', 'V3v', 'V3d', 'hV4'],

@@ -1,5 +1,5 @@
 import os, sys
-root = '/opt/data/private/src/fMRI/Decoding/StructureConstiantMindDiffusion'
+root = '/home/src/NeuralDiffuser'
 sys.path.append(root)
 sys.path.append(root+'/src')
 import numpy as np

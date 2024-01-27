@@ -3,8 +3,8 @@ import os
 import numpy as np 
 from PIL import Image
 # %%
-dirpath='G:/workware/src/fMRI/Decoding/StructureConstiantMindDiffusion/output/tv01-guided-sag-us/subj01/500000.0/0.2'
-savepath = 'E:/GitHub/NeuralDiffuser/recon/500000.0/0.2/'
+dirpath='./subj01/500000.0/0.2'
+savepath = './500000.0/0.2/'
 os.makedirs(savepath, exist_ok=True)
 img_path = sorted([os.path.join(dirpath, name) for name in os.listdir(dirpath) if name.endswith('.png')])
 # %%

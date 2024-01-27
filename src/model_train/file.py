@@ -1,9 +1,9 @@
 # %%
 import argparse
 import os, sys
-project_path = '/opt/data/private/src/fMRI/Decoding/NeuralDiffuser'
+project_path = '/home/src/NeuralDiffuser'
 sys.path.append(project_path)
-sys.path.append(project_path+'/src_icml24')
+sys.path.append(project_path+'/src')
 import numpy as np
 
 parser = argparse.ArgumentParser()

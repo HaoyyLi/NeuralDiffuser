@@ -1,8 +1,8 @@
 import argparse, os
 import sys
-root = '/opt/data/private/src/fMRI/Decoding/NeuralDiffuser'
+root = '/home/src/NeuralDiffuser'
 sys.path.append(root)
-sys.path.append(root+'/src_icml24')
+sys.path.append(root+'/src')
 import PIL
 import torch
 import numpy as np
@@ -72,7 +72,7 @@ def main():
     # ddim_eta = 0.0
     # strength = 0.8
     # scale = 5.0
-    nsd_path = '/opt/data/private/dataset/nsd/'
+    nsd_path = '/home/dataset/nsd/'
     output_dir_z = f'{root}/data/feature/{subject}/z/'
     output_dir_c = f'{root}/data/feature/{subject}/c/'
     
@@ -85,7 +85,7 @@ def main():
     precision = 'autocast'
     precision_scope = autocast if precision == "autocast" else nullcontext
 
-    model_path_diffusion = "/opt/data/private/huggingface/stable-diffusion-v1-4"
+    model_path_diffusion = "/home/huggingface/stable-diffusion-v1-4"
     vae = AutoencoderKL.from_pretrained(model_path_diffusion, subfolder="vae", revision=model_dtype, torch_dtype=torch_dtype)
     tokenizer = CLIPTokenizer.from_pretrained(model_path_diffusion, subfolder="tokenizer", revision=model_dtype, torch_dtype=torch_dtype)
     text_encoder = CLIPTextModel.from_pretrained(model_path_diffusion, subfolder="text_encoder", revision=model_dtype, torch_dtype=torch_dtype)

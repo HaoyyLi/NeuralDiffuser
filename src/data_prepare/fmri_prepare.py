@@ -2,9 +2,9 @@
 import argparse
 import os
 import sys
-root = '/opt/data/private/src/fMRI/Decoding/NeuralDiffuser'
+root = '/home/src/NeuralDiffuser'
 sys.path.append(root)
-sys.path.append(root+'/src_icml24')
+sys.path.append(root+'/src')
 import numpy as np
 import pandas as pd
 from modules.nsd_access import NSDAccess
@@ -34,7 +34,7 @@ def main():
     subject = opt.subject
     mask_name = opt.mask_name
 
-    nsd_path = '/opt/data/private/dataset/nsd/'
+    nsd_path = '/home/dataset/nsd/'
     mask_path = f"{root}/data/mask/{subject}/{mask_name}.npy"
 
     nsda = NSDAccess(nsd_path)

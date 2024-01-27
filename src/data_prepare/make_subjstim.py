@@ -3,9 +3,9 @@ import scipy.io
 from tqdm import tqdm
 import argparse
 import os, sys
-root = '/opt/data/private/src/fMRI/Decoding/NeuralDiffuser'
+root = '/home/src/NeuralDiffuser'
 sys.path.append(root)
-sys.path.append(root+'/src_icml24')
+sys.path.append(root+'/src')
 
 def main():
     parser = argparse.ArgumentParser()
@@ -38,7 +38,7 @@ def main():
 
     os.makedirs(savedir, exist_ok=True)
 
-    nsd_expdesign = scipy.io.loadmat('/opt/data/private/dataset/nsd/nsddata/experiments/nsd/nsd_expdesign.mat')
+    nsd_expdesign = scipy.io.loadmat('/home/dataset/nsd/nsddata/experiments/nsd/nsd_expdesign.mat')
 
     # Note that most of them are 1-base index!
     # This is why I subtract 1

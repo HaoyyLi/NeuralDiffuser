@@ -1,9 +1,9 @@
 # %%
 import argparse, os
 import sys
-root = '/opt/data/private/src/fMRI/Decoding/NeuralDiffuser'
+root = '/home/src/NeuralDiffuser'
 sys.path.append(root)
-sys.path.append(root+'/src_icml24')
+sys.path.append(root+'/src')
 import PIL
 import torch
 import numpy as np
@@ -77,7 +77,7 @@ def main():
     # ddim_eta = 0.0
     # strength = 0.8
     # scale = 5.0
-    nsd_path = '/opt/data/private/dataset/nsd/'
+    nsd_path = '/home/dataset/nsd/'
     output_dir = f'{root}/data/feature/{subject}/g/'
 
     nsda = NSDAccess(nsd_path)

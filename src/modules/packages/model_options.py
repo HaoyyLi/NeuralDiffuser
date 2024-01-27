@@ -2,7 +2,7 @@
 import pandas as pd
 import numpy as np
 import os, sys, torch
-root = '/opt/data/private/src/fMRI/Decoding/StructureConstiantMindDiffusion'
+root = '/home/src/NeuralDiffuser'
 import importlib.util
 from warnings import filterwarnings
 

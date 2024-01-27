@@ -30,11 +30,7 @@ class Clipper(torch.nn.Module):
         if clip_variant=="ViT-L/14" and hidden_state:
             from transformers import CLIPVisionModelWithProjection
             # image_encoder = CLIPVisionModelWithProjection.from_pretrained("openai/clip-vit-large-patch14").eval()
-            image_encoder = CLIPVisionModelWithProjection.from_pretrained("/opt/data/private/huggingface/clip-vit-large-patch14").eval()
-            # image_encoder = CLIPVisionModelWithProjection.from_pretrained("openai/clip-vit-large-patch14",cache_dir="/fsx/proj-medarc/fmri/cache")
-            #from transformers import CLIPVisionModelWithProjection
-            #sd_cache_dir = '/fsx/proj-medarc/fmri/cache/models--shi-labs--versatile-diffusion/snapshots/2926f8e11ea526b562cd592b099fcf9c2985d0b7'
-            #image_encoder = CLIPVisionModelWithProjection.from_pretrained(sd_cache_dir, subfolder='image_encoder').eval()
+            image_encoder = CLIPVisionModelWithProjection.from_pretrained("/home/huggingface/clip-vit-large-patch14").eval()
             image_encoder = image_encoder.to(device)
             for param in image_encoder.parameters():
                 param.requires_grad = False # dont need to calculate gradients
@@ -130,10 +126,8 @@ class OpenClipper(torch.nn.Module):
         assert clip_variant == 'ViT-H-14' # not setup for other models yet
          
         try:
-            # clip_model, _, preprocess = open_clip.create_model_and_transforms('ViT-H-14', 
-            #                             pretrained="/fsx/proj-medarc/fmri/cache/openclip/open_clip_pytorch_model.bin", device=device)
             clip_model, _, preprocess = open_clip.create_model_and_transforms('ViT-H-14', 
-                                        pretrained="/opt/data/private/huggingface/CLIP-ViT-H-14-laion2B-s32B-b79K/open_clip_pytorch_model.bin", device=device)
+                                        pretrained="/home/huggingface/CLIP-ViT-H-14-laion2B-s32B-b79K/open_clip_pytorch_model.bin", device=device)
         except:
             print("no cached model found, downloading...")
             clip_model, _, preprocess = open_clip.create_model_and_transforms('ViT-H-14', 
