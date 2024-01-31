@@ -49,7 +49,7 @@ python generate.py --method neuraldiffuser --subject <subject> --imgidx <0-981> 
 
 ### Results
 
-We show the subj01's results in `recon/0.0` for without guidance and `recon/500000.0/0.2` for with guidance. The first column of each figure represents the test image, and the subsequent 5 columns are repeatedly reconstructed images. Note that these results are $4\times$ downsampled due to file size. This leads to blurry and unclear.
+We show the subj01's results in `recon/0.0` for without guidance and `recon/500000.0/0.2` for with guidance. The first column of each figure represents the test image, and the subsequent 5 columns are repeatedly reconstructed images. Note that these results are $4\times$ downsampled due to file size. It would lead to blurry and unclear.
 
 
 
