@@ -1,4 +1,4 @@
-## NeuralDiffuser: Controllable fMRI Reconstruction by Primary Visual Feature
+## NeuralDiffuser: Controllable fMRI Reconstruction with Primary Visual Feature Guided Diffusion
 
 ### Environment
 
