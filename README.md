@@ -28,23 +28,34 @@ It first projects fMRI voxels to the feature space of stable-diffusion inspired 
 
 ### Usage
 
-1. To improve training efficiency, you need to run script `src/img2feat_sd_pipe.py` and `src/img2feat_guidance.py` to pre-save target embeddings (z: latent space of vqvae; c: text space of clip-vit-large-patch-14; g: features of layer-2,4,6,8,10,12 in CLIP-ViT-B-32).
+1. Agree to the Natural Scenes Dataset's [Terms and Conditions](https://cvnlab.slite.page/p/IB6BSeW_7o/Terms-and-Conditions) and fill out the [NSD Data Access form](https://forms.gle/xue2bCdM9LaFNMeb7)
 
-2. training model
+2. Git clone this repository:
+
+   ```
+   git clone https://github.com/HaoyyLi/NeuralDiffuser.git
+   cd NeuralDiffuser
+   ```
+
+3. Download https://huggingface.co/datasets/pscotti/mindeyev2 contents.
+
+4. To improve training efficiency, you need to run script `src/img2feat_sd_pipe.py` and `src/img2feat_guidance.py` to pre-save target embeddings (z: latent space of vqvae; c: text space of clip-vit-large-patch-14; g: features of layer-2,4,6,8,10,12 in CLIP-ViT-B-32).
+
+5. training model
 
    ```shell
    cd scripts
    bash ./train.sh
    ```
 
-3. inference
+6. inference
 
    ```shell
    cd scrips
    bash ./score.sh
    ```
 
-4. reconstruction
+7. reconstruction
 
    ```shell
    cd scrips
