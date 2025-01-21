@@ -14,7 +14,7 @@ This repository is a supplementary code to the paper named "[NeuralDiffuser: Neu
 
 It first projects fMRI voxels to the feature space of stable-diffusion inspired by [mindeyev2](https://medarc-ai.github.io/mindeye2/). Then, it trains a model to provide guided features (multiple feature layers from [CLIP-ViT-B-32](https://huggingface.co/laion/CLIP-ViT-B-32-laion2B-s34B-b79K)). Finally, they are fed to the proposed guided diffusion model to reconstruct natural images of the retina.The framework diagram is as follows:
 
-![2](E:\Users\pc\Desktop\新建文件夹\img\2.png)
+![2](img/2.png)
 
 ---
 
@@ -55,11 +55,11 @@ It first projects fMRI voxels to the feature space of stable-diffusion inspired 
 
 ### Results
 
-![3](E:\Users\pc\Desktop\新建文件夹\img\3.png)
+![3](img/3.png)
 
-![4](E:\Users\pc\Desktop\新建文件夹\img\4.png)
+![4](img/4.png)
 
-![5](E:\Users\pc\Desktop\新建文件夹\img\5.png)
+![5](img/5.png)
 
 ---
 
