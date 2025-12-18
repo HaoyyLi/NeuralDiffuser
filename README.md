@@ -101,5 +101,3 @@ If you use this repository in your research, please cite this paper.
 [MindEyeV2](https://github.com/MedARC-AI/MindEyeV2)
 
 [MindDiffuser](https://github.com/ReedOnePeck/MindDiffuser)
-
-I'd like to express thanks for [Reese Kneeland](https://www.reesekneeland.com/).
